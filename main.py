@@ -133,15 +133,19 @@ else:
                     try:
                         imagem = Pimage.open(end_da_img)
                         print('Imagen Carregada com Sucesso!')
+                        '''
+                        #recortando e redimensionando imagem
+                        #marca dágua pode ser removida
                         base_da_imagem = int(imagem.size[0])
                         altura_da_imagem = int(imagem.size[1])
-                        '''corta imagem centralizada'''
+                        #corta imagem centralizada
                         # altura nova (relação base/altura
                         n_altura = int(base_da_imagem / 1.78)
                         # cortar imagem centralizada
                         c_dim = int((altura_da_imagem - n_altura) / 2)
                         imagem_recort = imagem.crop((0, c_dim, base_da_imagem, n_altura + c_dim))
                         imagem = imagem_recort
+                        '''
                         imagem.thumbnail((base_da_imagem_thumbnail, altura_da_imagem_thumbnail))
                         imagem.save(nome_da_imagem)
                         lixeira.append(nome_da_imagem)
