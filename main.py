@@ -114,7 +114,7 @@ else:
             for linha in range(1,carr_doc_aba.max_row):
                 nome_da_celula = str(get_column_letter(coluna) + str(linha))
                 valor_da_celula = str(carr_doc_aba[nome_da_celula].value)
-                if valor_da_celula.endswith('.jpg') == True or valor_da_celula.endswith('.png') == True :
+                if valor_da_celula.endswith('.jpg') == True or valor_da_celula.endswith('.jpeg') == True or valor_da_celula.endswith('.png') == True :
                     print('Extenção de imagem encontrada na celula '+ nome_da_celula + '.')
                     data = Informa(valor_da_celula)
 
